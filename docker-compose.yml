@@ -1,0 +1,17 @@
+# version: '3.8'
+services:
+  tester:
+    build: ./tester
+    container_name: syslog-tester
+    ports:
+      - "5514:5514/udp"
+    volumes:
+      - ./tester/syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf:ro
+      - ./tester/logs:/var/log/syslog-ng
+  sender:
+    build: ./sender
+    container_name: syslog-sender
+    ports:
+      - "8080:8080"
+    depends_on:
+      - tester

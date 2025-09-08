@@ -1,0 +1,10 @@
+sender/frontend/node_modules/
+.DS_Store
+__pycache__/
+*.pyc
+env/
+venv/
+*.env
+*.sqlite3
+logs/
+sender/frontend/dist/
