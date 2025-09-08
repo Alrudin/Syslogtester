@@ -20,7 +20,7 @@ This project provides a Docker-based system for testing syslog-ng configurations
 ### 1. Clone the repository
 ```
 git clone <this-repo-url>
-cd syslogtester-web
+cd Syslogtester
 ```
 
 ### 2. Build and start the system
